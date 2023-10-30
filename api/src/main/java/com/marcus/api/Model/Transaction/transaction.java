@@ -22,14 +22,14 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-@Entity(name="Transactions")
-@Table(name="Transacitions")
+@Entity(name="Transaction")
+@Table(name="Transacition")
 @Data
 @Getter
 @Setter
 @EqualsAndHashCode(of="id")
 @AllArgsConstructor
-public class transaction {
+public class Transaction {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
