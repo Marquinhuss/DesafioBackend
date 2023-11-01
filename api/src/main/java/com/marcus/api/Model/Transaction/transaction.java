@@ -1,7 +1,7 @@
 package com.marcus.api.Model.Transaction;
 
 import java.math.BigDecimal;
-
+import java.time.LocalDateTime;
 
 import com.marcus.api.Model.Users.Users;
 
@@ -28,6 +28,9 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Transaction {
     
+    public Transaction() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,5 +44,8 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name="receiver_id")
     private Users receiver;
+
+    public void setTimestamp(LocalDateTime now) {
+    }
     
 }
