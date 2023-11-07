@@ -1,11 +1,11 @@
 package com.marcus.api.Service;
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+//import org.springframework.web.client.RestTemplate;
 
 import com.marcus.api.DTO.TransactionDTO;
 import com.marcus.api.Model.Transaction.Transaction;
@@ -24,8 +24,8 @@ public class TransactionService {
     @Autowired
     private TransactionHandler transactionHandler;
 
-    @Autowired
-    private RestTemplate restTemplate;
+    //@Autowired
+    //private RestTemplate restTemplate;
 
     public void transferToAcount(TransactionDTO transactionDTO) throws Exception{
         Users sender = this.service.findUserById(transactionDTO.senderId());

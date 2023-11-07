@@ -2,6 +2,9 @@ package com.marcus.api.TransactionExternHandler;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TransactionHandler {
     
     public boolean randomValidation(){

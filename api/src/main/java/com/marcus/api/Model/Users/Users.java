@@ -2,7 +2,8 @@ package com.marcus.api.Model.Users;
 
 import java.math.BigDecimal;
 
-import jakarta.annotation.Generated;
+import com.marcus.api.DTO.UserDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -47,4 +48,13 @@ public class Users {
 
     @Enumerated(EnumType.STRING)
     private UserType userType;
+
+    public Users(UserDTO dto){
+        this.firstName = dto.firstName();
+        this.lastName = dto.lastName();
+        this.document = dto.document();
+        this.email = dto.email();
+        this.password = dto.password();
+        this.balance = dto.balance();
+    }
 }
